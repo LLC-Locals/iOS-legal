@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Locals Third-Party Services</title>
+  <meta name="description" content="The third-party services the Locals iOS app uses, and what each one receives or provides.">
+  <link rel="stylesheet" href="../../assets/legal.css">
+</head>
+<body>
+  <main>
+    <nav class="legal-set" aria-label="Locals legal documents">
+      <a href="../../TOS/eng/TOS.html">Terms of Service</a>
+      <a href="../../privacy/eng/privacy.html">Privacy Policy</a>
+      <a href="../../copyright/eng/copyright.html">Copyright and Takedown</a>
+      <a href="../../third-party/eng/third-party.html" aria-current="page">Third-Party Services</a>
+      <a href="../../">Contact</a>
+    </nav>
+
+    <header>
+      <p class="muted">Last updated: 1 October 2026</p>
+      <h1>Third-Party Services</h1>
+      <p>
+        <strong>Locals</strong> relies on services run by other companies. This page names each one,
+        when Locals uses it, what it receives from the app, and what it provides. It adds detail to the
+        <a href="../../privacy/eng/privacy.html">Privacy Policy</a>, which remains the full statement of
+        how your information is handled.
+      </p>
+    </header>
+
+    <div class="notice">
+      <strong>Google Maps.</strong> Locals includes Google Maps features and content. Your use of
+      Google Maps features and content is subject to the then-current versions of the
+      <a href="https://maps.google.com/help/terms_maps/">Google Maps/Google Earth Additional Terms of Service</a>
+      and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
+    </div>
+
+    <h2>Sign-in</h2>
+
+    <h3>Sign in with Apple — Apple</h3>
+    <ul>
+      <li><strong>When:</strong> only if you choose to sign in with Apple.</li>
+      <li><strong>Receives:</strong> a sign-in request from the app.</li>
+      <li>
+        <strong>Provides:</strong> an Apple account identifier, and the name and email address you
+        agree to share. If you hide your email, Apple provides a relay address that forwards to you.
+      </li>
+      <li><strong>Manage it:</strong> in your Apple Account settings, under Sign in with Apple.</li>
+      <li><a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></li>
+    </ul>
+
+    <h3>Google Sign-In — Google</h3>
+    <ul>
+      <li><strong>When:</strong> only if you choose to sign in with Google.</li>
+      <li><strong>Receives:</strong> a sign-in request from the app.</li>
+      <li>
+        <strong>Provides:</strong> your Google account identifier, name, email address and profile
+        photo. Locals asks only for this basic profile. It does not request access to Gmail, Drive,
+        Contacts, Calendar, or any other Google data, and it does not read or send anything on your
+        behalf.
+      </li>
+      <li><strong>Manage it:</strong> remove Locals from the third-party connections in your Google Account.</li>
+      <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+    </ul>
+
+    <h2>Firebase — Google</h2>
+
+    <h3>Firebase Authentication</h3>
+    <ul>
+      <li><strong>When:</strong> every sign-in, whichever method you use.</li>
+      <li>
+        <strong>Receives:</strong> the Apple or Google sign-in result, or your email address and
+        password if you sign in with email. Firebase stores the password; Locals never sees it.
+      </li>
+      <li><strong>Provides:</strong> an account identifier and the tokens that keep you signed in.</li>
+    </ul>
+
+    <h3>Google Analytics for Firebase</h3>
+    <ul>
+      <li><strong>When:</strong> while you use the app.</li>
+      <li>
+        <strong>Receives:</strong> events about what you do in the app, naming content by identifier;
+        your public identifier; the date your account was created; whether you allowed location access;
+        an app-installation identifier; device model, iOS version, app version, and language and region
+        settings; and your IP address with each request.
+      </li>
+      <li>
+        <strong>Never receives:</strong> your location or the map area, anything you typed, your email,
+        name or photo, or an advertising identifier. Locals uses the version of Google Analytics that
+        does not collect one.
+      </li>
+      <li><strong>Provides:</strong> usage reports that tell us how Locals is used.</li>
+    </ul>
+
+    <h3>Firebase Crashlytics</h3>
+    <ul>
+      <li><strong>When:</strong> when the app crashes or records an error.</li>
+      <li>
+        <strong>Receives:</strong> a crash or error report — the state of the app and device, a stack
+        trace, short technical messages — with your internal account identifier and an
+        app-installation identifier.
+      </li>
+      <li><strong>Provides:</strong> crash reports that help us fix problems.</li>
+    </ul>
+    <p><a href="https://firebase.google.com/support/privacy">Privacy and security in Firebase</a></p>
+
+    <h2>Places and maps</h2>
+
+    <h3>Google Places — Google Maps Platform</h3>
+    <ul>
+      <li><strong>When:</strong> when you search for a place, or the app shows a place's photos.</li>
+      <li>
+        <strong>Receives:</strong> for a search, the text you searched for and the centre and size of
+        the map area you searched in. The search is sent by our servers, not by your device. For a
+        photo, your device requests it from Google directly, so Google receives the photo request and
+        your device's IP address.
+      </li>
+      <li>
+        <strong>Provides:</strong> places — their identifiers, names, addresses, categories and
+        coordinates — and place photos with the names of the people who took them.
+      </li>
+      <li>
+        Use of this content is subject to the
+        <a href="https://maps.google.com/help/terms_maps/">Google Maps/Google Earth Additional Terms of Service</a>
+        and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
+      </li>
+    </ul>
+
+    <h3>Mapbox</h3>
+    <ul>
+      <li><strong>When:</strong> whenever the app shows a map.</li>
+      <li>
+        <strong>Receives:</strong> requests for the parts of the map on your screen, with your device's
+        IP address and basic device and app information. Your own position on the map is worked out on
+        your device. Mapbox may also collect anonymous usage and location telemetry from the map; you
+        can turn it off by tapping the information button on the map.
+      </li>
+      <li><strong>Provides:</strong> the map, drawn from Mapbox and OpenStreetMap data.</li>
+      <li><a href="https://www.mapbox.com/legal/privacy">Mapbox Privacy Policy</a></li>
+    </ul>
+
+    <h2>Our own servers</h2>
+    <p>
+      Your account, profile, content, reports and blocks are stored on servers that we run through
+      hosting and database providers. They receive what the app sends to provide Locals, as described
+      in the <a href="../../privacy/eng/privacy.html">Privacy Policy</a>, and process it only on our
+      instructions.
+    </p>
+
+    <h2>What Locals Does Not Use</h2>
+    <ul>
+      <li>No advertising networks and no ads.</li>
+      <li>No advertising identifier and no tracking across other companies' apps or websites.</li>
+      <li>No data brokers. We do not sell or rent personal information.</li>
+      <li>No payment processors. Locals is free and collects no payment information.</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>
+      Questions about this page or about your data:
+      <a href="mailto:privacy@localsapp.app">privacy@localsapp.app</a>.
+    </p>
+  </main>
+</body>
+</html>
