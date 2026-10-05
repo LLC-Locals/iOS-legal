@@ -18,7 +18,7 @@
     </nav>
 
     <header>
-      <p class="muted">Last updated: 1 October 2026</p>
+      <p class="muted">Last updated: 5 October 2026</p>
       <h1>Third-Party Services</h1>
       <p>
         <strong>Locals</strong> relies on services run by other companies. This page names each one,
@@ -67,12 +67,18 @@
 
     <h3>Firebase Authentication</h3>
     <ul>
-      <li><strong>When:</strong> every sign-in, whichever method you use.</li>
+      <li><strong>When:</strong> every sign-in, whichever method you use, and when Locals sends you an account email.</li>
       <li>
         <strong>Receives:</strong> the Apple or Google sign-in result, or your email address and
-        password if you sign in with email. Firebase stores the password; Locals never sees it.
+        password if you sign in with email. Firebase stores the password; Locals never sees it. It
+        also receives your email address, to send account emails.
       </li>
-      <li><strong>Provides:</strong> an account identifier and the tokens that keep you signed in.</li>
+      <li>
+        <strong>Provides:</strong> an account identifier and the tokens that keep you signed in. It
+        also sends the account emails — the link to verify your email address, the link to reset your
+        password, and the notice to your old address when your email address changes — from
+        <a href="mailto:noreply@localsapp.app">noreply@localsapp.app</a>.
+      </li>
     </ul>
 
     <h3>Google Analytics for Firebase</h3>
@@ -137,6 +143,27 @@
       </li>
       <li><strong>Provides:</strong> the map, drawn from Mapbox and OpenStreetMap data.</li>
       <li><a href="https://www.mapbox.com/legal/privacy">Mapbox Privacy Policy</a></li>
+    </ul>
+
+    <h2>Email</h2>
+
+    <h3>Zoho Mail — Zoho Corporation</h3>
+    <ul>
+      <li>
+        <strong>When:</strong> when you write to
+        <a href="mailto:support@localsapp.app">support@localsapp.app</a>,
+        <a href="mailto:privacy@localsapp.app">privacy@localsapp.app</a> or
+        <a href="mailto:legal@localsapp.app">legal@localsapp.app</a>, or reply to an email from Locals.
+      </li>
+      <li>
+        <strong>Receives:</strong> your email address, the name your mail client sends, your message
+        and any attachments.
+      </li>
+      <li>
+        <strong>Provides:</strong> the mailbox from which we read and answer your message. It is
+        hosted in Zoho's EU data centre.
+      </li>
+      <li><a href="https://www.zoho.com/privacy.html">Zoho Privacy Policy</a></li>
     </ul>
 
     <h2>Our own servers</h2>
