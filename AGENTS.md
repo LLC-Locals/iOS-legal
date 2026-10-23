@@ -62,8 +62,9 @@ glossary says.
 Open a **draft** pull request as the first step, before the work is done. Its
 body says `Closes LLC-Locals/iOS-legal#N`, and its branch starts with the agent's
 name: `claude/`, `codex/` or `cursor/`. The project board reads the pull request:
-a draft is In Progress, ready for review is Review, merged is Done. Do not move
-cards on the board by hand.
+a draft is In Progress, ready for review is Review, merged is Done. Here it is
+read by the nightly board sync in `locals-discovery`, not on each event, so the
+board can be a day behind. Do not move cards on the board by hand.
 
 ## Cross-Repository Requests
 
@@ -84,11 +85,23 @@ here alone.
 Never edit another repository, push to it, or create issues and pull requests in
 it directly. When a task needs work there, such as an in-app notice, a change to
 the Support Page, or an unresolved product decision, post one follow-up request
-comment on the current GitHub Issue. The `create-follow-up-issue` workflow
-validates it and creates the issue.
+comment.
+
+**Post it on the discovery issue the current task belongs to, not on the
+current issue.** This repository is public, and the shared `follow-up-request`
+workflow lives in the private `locals-discovery`, which shares its workflows
+with private repositories only — so nothing here can run it. A comment on the
+discovery runs it there. The discovery is the current issue's parent, or the
+issue under `## Source issue` in its body. If the task has neither, do not post
+the request: stop and ask the owner where it belongs.
+
+The new issue becomes a sub-issue of that discovery, as everywhere else.
+`Blocking: Yes` marks the **discovery** as blocked by it, not the task here; say
+in the task that it waits on the new issue.
 
 Use `.agents/skills/locals-crossrepo-request/SKILL.md` for the comment format,
-the deduplication key, and how to react to the workflow answer.
+the deduplication key, and how to react to the workflow answer. Where the skill
+says "the current issue", read "the discovery issue".
 
 ## Repository Map
 
@@ -102,9 +115,9 @@ the deduplication key, and how to react to the workflow answer.
   the published site.
 - `.agents/skills/`: repo-owned, agent-neutral skill sources.
 - `.claude/skills/`: Claude Code discovery adapters symlinked to shared skills.
-- `.github/workflows/create-follow-up-issue.yml`: caller of the shared
-  follow-up request workflow in `locals-discovery`. Do not inline the shared
-  implementation here.
+- No workflows. The shared ones in `locals-discovery` cannot be called from a
+  public repository; do not add a caller, and do not copy their implementation
+  here.
 - `CLAUDE.md`: thin Claude Code adapter that imports this policy.
 
 ## Verification
@@ -112,6 +125,5 @@ the deduplication key, and how to react to the workflow answer.
 - Open each changed page in a browser and follow its links. Paths are relative,
   so a page that renders from the repository root renders on GitHub Pages.
 - The changed document's "Last updated" date is today's.
-- Workflow changes must pass `actionlint`.
 - Before finishing, state what was verified. If verification could not be run,
   explain why.
