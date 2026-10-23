@@ -1,0 +1,4 @@
+interface:
+  display_name: "Locals Cross-Repository Request"
+  short_description: "Request work in another Locals repository"
+  default_prompt: "Use $locals-crossrepo-request to open a follow-up request for the missing cross-repository work."

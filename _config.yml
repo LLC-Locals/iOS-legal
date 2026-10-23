@@ -1,3 +1,10 @@
 theme: jekyll-theme-minimal
 title: Locals
 description: Support and legal documents for the Locals iOS app.
+
+# Agent policy files are for the repository, not the published site. GitHub
+# Pages renders Markdown without front matter, so without this they would be
+# served as pages.
+exclude:
+  - AGENTS.md
+  - CLAUDE.md
