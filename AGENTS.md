@@ -59,12 +59,15 @@ glossary says.
 
 ## Working on an Issue
 
-Open a **draft** pull request as the first step, before the work is done. Its
-body says `Closes LLC-Locals/iOS-legal#N`, and its branch starts with the agent's
-name: `claude/`, `codex/` or `cursor/`. The project board reads the pull request:
-a draft is In Progress, ready for review is Review, merged is Done. Here it is
-read by the nightly board sync in `locals-discovery`, not on each event, so the
-board can be a day behind. Do not move cards on the board by hand.
+This repository has **issues but no pull requests**: pull requests are switched
+off, and the owner edits the documents by hand (0097). An agent works here only
+when the owner asks for a change in a session, and commits to `main` only when
+the owner says so — the commit publishes it.
+
+The commit that does the work of an issue says `Closes #N` in its message, so
+GitHub closes the issue, and the project board moves it to Done. Until then the
+board shows it as Todo or Ready To Dev, set nightly from its **blocked by**
+relationships. Do not move cards on the board by hand.
 
 ## Cross-Repository Requests
 
